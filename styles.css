@@ -1,3 +1,89 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,300&display=swap');
+html
+{
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+body
+{
+  background-color: #ebebeb;
+}
+.main
+{
+  background-color: #f45b69;
+  width: 63%;
+  height: 30rem;
+  position: absolute;
+  top: 20%;
+  left: 19%;
+}
+#heading
+{
+  color: #4062bb;
+  font-size: 6vw;
+  position: absolute;
+  left: 40%;
+}
+#question
+{
+  font-size: 2vw;
+  position: absolute;
+  top: 25%;
+  left: 20%;
+}
+#myQuestion
+{
+  font-size: 2vw;
+  width: 30%;
+  border: 2px solid #4062bb;
+  position: absolute;
+  left: 35%;
+  top: 25%;
+}
+#answers
+{
+  display: flex;
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  font-size: 2vw;
+  justify-content: space-between;
+  /* background-color: aquamarine; */
+  width: 60%;
+  align-items: center;
+}
+.op
+{
+  /* color: bisque; */
+  text-align: center;
+  font-weight: 250;
+  width: 16%;
+  border: 1px solid black;
+  border-radius: 9px;
+  /* background-color: beige; */
+  background-color: #4062bb;
+}
+.lifelines
+{
+  display: flex;
+  position: absolute;
+  top: 42%;
+  left: 30%;
+  width: 40%;
+  /* background-color: aqua; */
+  background-color: #4062bb;
+  justify-content: space-between;
+  align-items: center;
+}
+#restart
+{
+  position: absolute;
+  top: 75%;
+  left: 20%;
+}
+#exit
+{
+  position: absolute;
+  top: 75%;
+  left: 30%;
+}
