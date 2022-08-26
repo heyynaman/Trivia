@@ -4,25 +4,39 @@ html
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
+*
+{
+  margin: 0;
+}
+html,body
+{
+    height: 100%;
+}
 body
 {
-  background-color: #ebebeb;
+  background: radial-gradient(#4bb8da, #ef8ae8);
+  box-sizing: border-box;
 }
-.main
+ .main
 {
-  background-color: #f45b69;
+  background:-webkit-repeating-linear-gradient(#4bb8da, #ae13a4);
   width: 63%;
   height: 30rem;
   position: absolute;
   top: 20%;
   left: 19%;
-}
+  box-shadow: 10px 5px 5px rgba(9, 8, 8,0.2);
+  /* box-shadow: 50px; */
+  border: 1px solid -webkit-repeating-linear-gradient(#4bb8da, #ae13a4);
+  border-radius: 20px;
+ }  
 #heading
 {
-  color: #4062bb;
-  font-size: 6vw;
+  color: black;
+  font-size: 6rem;
   position: absolute;
   left: 40%;
+  text-shadow: 5px;
 }
 #question
 {
@@ -35,7 +49,7 @@ body
 {
   font-size: 2vw;
   width: 30%;
-  border: 2px solid #4062bb;
+  border: 2px solid #ebebeb;
   position: absolute;
   left: 35%;
   top: 25%;
@@ -44,7 +58,7 @@ body
 {
   display: flex;
   position: absolute;
-  top: 35%;
+  top: 55%;
   left: 20%;
   font-size: 2vw;
   justify-content: space-between;
@@ -61,29 +75,120 @@ body
   border: 1px solid black;
   border-radius: 9px;
   /* background-color: beige; */
-  background-color: #4062bb;
+  background-color: #f5c8f2;
+}
+.op:hover
+{
+  border: 1px solid #f5c8f2;
 }
 .lifelines
 {
-  display: flex;
+  /* display: flex; */
   position: absolute;
   top: 65%;
   left: 30%;
   width: 40%;
+  background-color: #ef8ae8;
+
   /* background-color: aqua; */
-  background-color: #4062bb;
+  /* background-color: rgb(143, 115, 218); */
   justify-content: space-between;
-  align-items: center;
+  text-align: center;
+}
+.life-head
+{
+  font-size: medium;
+  width: 8rem;
+  background-color: #ef8ae8;
+}
+.lifes 
+{
+  line-height: 2em;
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
 }
 #restart
 {
   position: absolute;
-  top: 75%;
+  top: 77%;
   left: 20%;
+  animation: 0.5s infinite alternate ease-in ;
+}
+#restart:hover
+{
+  font-size: 110%;
+  /* border: 1px solid #ebebeb; */
+  /* padding: 0em 0.5em; */
+  /* border-radius: 8%; */
+  /* background-color: #ebebeb; */
 }
 #exit
 {
   position: absolute;
-  top: 75%;
-  left: 30%;
+  top: 77%;
+  left: 25%;
+
+}
+#exit:hover
+{
+  font-size: 110%;
+  /* border: 1px solid #ebebeb;
+  padding: 0em 0.7em;
+  border-radius: 8%;
+  background-color: #ebebeb; */
+}
+#skip:hover
+{
+  border: 1px solid #ef8ae8;
+  background-color: #f5c8f2;
+  border-radius: 0.2rem;
+  padding: 0rem 0.2rem;
+}
+#doubleDip:hover
+{
+  border: 1px solid #ef8ae8;
+  background-color: #f5c8f2;
+  border-radius: 0.2rem;
+  padding: 0rem 0.2rem;
+}
+#hint:hover
+{
+  border: 1px solid #ef8ae8;
+  background-color: #f5c8f2;
+  border-radius: 0.2rem;
+  padding: 0rem 0.2rem;
+}
+.greet
+{
+  font-size: 7rem;
+  position: absolute;
+  top: 4%;
+  left: 33%;
+  right:30%
+}
+.start-btn
+{
+
+  font-size: 2.5rem;
+  position: absolute;
+  top: 25%;
+  left:35%;
+  right: 65%;
+  background-color: #f45b69;
+  
+}
+.end-game
+{
+  font-size: 2.5rem;
+  position: absolute;
+  top: 25%;
+  left: 55%;
+  right: 45%;
+  
+}
+.img
+{
+  width: 100%;
+  height: 100%;
 }
