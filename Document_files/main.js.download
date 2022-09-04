@@ -1,0 +1,170 @@
+// alert("Welcome to the trivia game!")
+console.log("Welcome")
+let content = document.querySelector(".game")
+let start = document.querySelector(".start-btn")
+let welcome = document.querySelector(".welcome")
+let question = document.querySelector("#myQuestion")
+let options = document.querySelectorAll(".op")
+let restart = document.querySelector("#restart")
+let exit = document.querySelector("#exit")
+let lbQuestion = document.querySelector("#question")
+let start_game = document.querySelector("#start-game")
+let ques_opts = document.querySelector(".ques-opts");
+let ansContainer = document.querySelector("#answers")
+let dispOp1 = document.querySelector("#opt1")
+let dispOp2 = document.querySelector("#opt2")
+let dispOp3 = document.querySelector("#opt3")
+let dispOp4 = document.querySelector("#opt4")
+let op1 = document.querySelector("#op1")
+let op2 = document.querySelector("#op2")
+let op3 = document.querySelector("#op3")
+let op4 = document.querySelector("#op4")
+content.style.display = 'none'
+let myans;
+start.addEventListener('click', () =>
+{
+    welcome.style.display = 'none'
+    content.style.display = 'block'
+});
+start_game.addEventListener('click', ()=>
+{
+    for(let i=0;i<options.length;i++ )
+    {
+    options[i].style.display='block';
+    }
+    let lf= document.querySelector(".lifelines")
+    lf.style.display='block';
+    question.style.display='block';
+    lbQuestion.style.display='block';
+    restart.style.display='block';
+    exit.style.display='block'
+    start_game.style.display='none';
+    ques_opts.style.display='block'
+    
+
+})
+//hidding options
+for(let i=0;i<options.length;i++ )
+{
+options[i].style.display='none';
+}
+//hiding ans
+ques_opts.style.display='none'
+
+//hiding lifelines
+let lf= document.querySelector(".lifelines")
+lf.style.display='none';
+
+//hiding questions
+question.style.display='none';
+lbQuestion.style.display='none';
+//hidding restart and exit
+restart.style.display='none';
+exit.style.display='none'
+
+//Question
+
+let questions = [
+     {
+        question: "What is the capital of India?",
+        op1: "Delhi",
+        op2: "Mumbai",
+        op3: "Kolkata",
+        op4: "Amritsar",
+        answer: "Delhi"
+     },
+     {
+        question:"What is the largest animal in the world?",
+        op1: "The Blue Whale",
+        op2: "Elephant",
+        op3: "Giraffe",
+        op4: "Lion",
+        answer: "The Blue Whale"
+     }
+];
+
+//Picking Random Question
+let length = questions.length;
+
+//function pickRand()
+let pickRand = (questions) => {
+let randNum = Math.floor(Math.random() * length)
+myans = randNum;
+let myquestion = questions[randNum].question
+var ShowOP1 = questions[randNum][`${"op1"}`];
+var ShowOP2 = questions[randNum][`${"op2"}`];
+var ShowOP3 = questions[randNum][`${"op3"}`];
+var ShowOP4 = questions[randNum][`${"op4"}`];
+// ques_opts.innerHTML = `Option1: ${ShowOP1}<br> ${ShowOP2} <br> ${ShowOP3} <br> ${ShowOP4} <br> `
+dispOp1.innerHTML = `${ShowOP1}`
+dispOp2.innerHTML = `${ShowOP2}`
+dispOp3.innerHTML = `${ShowOP3}`
+dispOp4.innerHTML = `${ShowOP4}`
+return myquestion
+}
+
+//starting game
+question.innerHTML=pickRand(questions);
+
+
+//Getting Answers and Options
+let correctAns = questions[myans]['answer']
+let opt1 = questions[myans]['op1']
+let opt2 = questions[myans]['op2']
+let opt3 = questions[myans]['op3']
+let opt4 = questions[myans]['op4']
+
+//Checking Correct Answer
+
+op1.addEventListener('click', () =>
+{
+ 
+   if(correctAns==opt1)
+   {
+      alert("Correct")
+   }
+   else{
+      console.log(correctAns)
+      console.log(op1)
+      alert("game over")
+   }
+})
+op2.addEventListener('click', () =>
+{
+   if(correctAns==opt2)
+   {
+      alert("Correct")
+   }
+   else{
+      console.log(correctAns)
+      console.log(op2)
+      alert("game over")
+   }
+})
+op3.addEventListener('click', () =>
+{
+   if(correctAns==opt2)
+   {
+      alert("Correct")
+   }
+   else{
+      console.log(correctAns)
+      console.log(op2)
+      alert("game over")
+   }
+})
+op4.addEventListener('click', () =>
+{
+   if(correctAns==opt4)
+   {
+      alert("Correct")
+   }
+   else{
+      console.log("Correct Answer:"+correctAns)
+      console.log("Your Answer:"+opt4)
+      alert("game over")
+   }
+})
+
+
+

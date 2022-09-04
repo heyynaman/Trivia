@@ -81,17 +81,19 @@ body
   width: 60%;
   align-items: center;
 }
-#ques-opts
+.ques-opts
 {
+  background-color: #ef8ae8;
   display: flex;
-  width: 50%;
-  justify-content: space-around;
-  background: #4bb8da;
-  position: absolute;
-  top: 40%;
-  left: 25%;
+  width: 200px;
+  
+  
 } 
-
+#opt1
+{
+  /* position: absolute;
+  top: 50%; */
+}
 .op 
 {
   /* color: bisque; */
@@ -186,4 +188,37 @@ body
   background-color: #f5c8f2;
   border-radius: 0.2rem;
   padding: 0rem 0.2rem;
+}
+.greet
+{
+  font-size: 7rem;
+  position: absolute;
+  top: 4%;
+  left: 33%;
+  right:30%
+}
+.start-btn
+{
+
+  font-size: 2.5rem;
+  position: absolute;
+  top: 25%;
+  left:35%;
+  right: 65%;
+  background-color: #f45b69;
+  
+}
+.end-game
+{
+  font-size: 2.5rem;
+  position: absolute;
+  top: 25%;
+  left: 55%;
+  right: 45%;
+  
+}
+.img
+{
+  width: 100%;
+  height: 100%;
 }

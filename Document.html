@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+<link href="./Document_files/styles.css" rel="stylesheet"></head>
+<body data-new-gr-c-s-check-loaded="14.1077.0" data-gr-ext-installed="">
+    <!-- Welcome -->
+    <div class="welcome" style="display: none;">
+        <img src="./Document_files/background2.avif" class="img" alt="">
+        <div class="greet">
+            Welcome
+        </div>
+        <div class="start-btn">
+            Start 
+        </div>
+        <div class="end-game">
+            Exit
+        </div>
+    </div>
+
+    <!-- Game -->
+    
+    <div class="game" style="display: block;">
+        <div id="heading">
+         Trivia
+        </div>
+        <div class="main">
+        </div>
+        <div id="question" style="display: block;">
+             Question:
+        </div>
+        <div id="myQuestion" style="display: block;">
+         Welcome to the Game!
+        </div>
+        <div class="ques-opts" style="display: block;">
+            <div>a</div>
+            <div>b</div>
+            <div>c</div>
+            <div>d</div>
+            <div>e</div>
+            <!-- <div id="opt1"></div>
+            <div id="opt2"></div>
+            <div id="opt3"></div>
+            <div id="opt4"></div> -->
+        </div>
+        <!-- game starter buttom -->
+        <div id="start-game" style="display: none;">
+            <div>
+                Start Game
+            </div>
+        </div>
+
+
+        <div id="answers">
+             <div id="op1" class="op" style="display: block;">
+                 Option 1
+             </div>
+             <div id="op2" class="op" style="display: block;">
+                 Option 2
+             </div>
+             <div id="op3" class="op" style="display: block;">
+                 Option 3
+             </div>
+             <div id="op4" class="op" style="display: block;">
+                 Option 4
+             </div>
+         
+        </div>
+
+   <!-- Lifelines -->
+   
+   <div class="lifelines" style="display: block;"> 
+        <div class="lifes">
+            <div class="life-head">
+                LifeLines Left: 
+            </div>
+            <div id="skip">
+            Skip
+            </div>
+            <div id="doubleDip">
+            Double Dip
+            </div>
+            <div id="hint">
+            Hint
+            </div>
+        </div>
+   </div>
+   <!-- Restart and Exit -->
+   <div id="restart" style="display: block;">Restart</div>
+   <div id="exit" style="display: block;">Exit</div>
+   </div>
+   
+   <script src="./Document_files/main.js.download"></script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
